@@ -7,7 +7,7 @@
  * Return: On success 1.
  * On error, -1 is returned, and errn o is set appropriately.
  */
-int  -putchar(char c)
+int  putchar(char c)
 {
 	return (write(1, &c, 1));
 }
