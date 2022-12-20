@@ -1,22 +1,15 @@
 @include "main.h"
 /**
- * puts2 - function should print only one character out of two
- * starting with the first one
- * @str: input
- * Return: print
+ * main - check the code
+ *
+ * Return: Always 0.
  */
-void puts2(char *str)
+int main(void)
 {
-	int 1 = 0;
+	char *str;
 
-	while (str[i] != '\0')
-	{
-		if (i % 2 == 0)
-		{
-			_putchar(str[i]);
-		}
-		i++;
-	}
-	_putchar('\n');
+	str = "0123456789";
+	puts2(str);
+	return (0);
 }
 
