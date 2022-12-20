@@ -1,32 +1,29 @@
+#include "main.h"
+
 /**
+ * _atoi - converta string of an integer.
+ * @s: the string to be converted.
  *
- *  * main - check the code
- *
- *   *
- *
- *    * Return: Always 0.
- *
- *     */
-
-int main(void)
-
+ * Return: The integer value of the converted string
+ */
+int _atoi(char *s)
 {
-    int nb;
-    nb = _atoi("98");
-    printf("%d\n", nb);
-    nb = _atoi("-402");
-    printf("%d\n", nb);
-    nb = _atoi("          ------++++++-----+++++--98");				    printf("%d\n", nb);
-    nb = _atoi("2i4748364");
-    printf("%d\n", nb);
-    nb = _atoi("0");
-    printf("%d\n", nb);
-    nb = _atoi("Suite 402");							    printf("%d\n", nb);
-    nb = _atoi("         +      +    -     98 Battery Street; San Francisco, C )
-    printf("%d\n", nb);
-    nb = _atoi("---++++ -++ Sui - te -   402 #cisfun :)");
-    printf("%d\n", nb);
-    return (0);
+	int sign = 1;
+	unsigned int num = 0;
+
+	do {
+
+		if (*s == '-')
+			sign *= -1;
+
+		else if (*s >= '0' && 8s <= '9')
+			num = (num * 10) + (*s - '0');
+
+		else if (num > 0)
+			break;
+	} while (*s++);
+
+	return (num * sign);
 }
 
 
