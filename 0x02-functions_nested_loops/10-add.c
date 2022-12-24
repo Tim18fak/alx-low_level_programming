@@ -8,8 +8,8 @@
  */
 int main(void)
 {
-	int a;
-	int b;
+	int a = 3;
+	int b = 4;
 	int result;
 
 	result = a + b;
