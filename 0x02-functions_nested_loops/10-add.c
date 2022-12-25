@@ -8,11 +8,9 @@
  */
 int main(void)
 {
-	int a = 3;
-	int b = 4;
-	int result;
+	int n;
 
-	result = a + b;
-	printf("%d\n", result);
+	n = add(89, 9);
+	printf("%d\n", n);
 	return (0);
 }
