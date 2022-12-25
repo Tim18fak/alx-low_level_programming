@@ -1,26 +1,38 @@
-#include <stdio.h>
-#include <stdio.h>
+#include <stdlib.h>
 #include <time.h>
+#include <stdio.h>
+
 /**
- *  main - Entry point
- * Description: check on the last digit of the assigned var
- * Return: Always 0 (success)
+ *main -> assign a random number to the variable n each time it is executed
+ *and print the last digit of the number stored in the variable n
+ *Return: Always 0 (Success)
  */
+
 int main(void)
 {
-	int n, m;
+	int n;
+	int x;
 
-	strand(time(0));
+	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	m = n  % 10;
-	if (m > 5)
+
+	x = n % 10;
+	printf("Last digit of %d is %d ", n, x);
+	if (x > 5)
 	{
-		printf("Last digit of %d and is less than 6 and not 0\n", n, m);
+		printf("and is greater than 5");
 	}
-	else
+	if (x == 0)
 	{
-		printf("Last digit of %d and is 0\n", n, m);
+		printf("and is 0");
 	}
+	if (x < 6 && x != 0)
+	{
+		printf("and is less than 6 and not 0");
+	}
+
+	printf("\n");
+
 	return (0);
 }
 
