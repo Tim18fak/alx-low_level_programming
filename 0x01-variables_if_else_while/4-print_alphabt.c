@@ -1,51 +1,22 @@
-nclude<stdio.h>
+#include <stdio.h>
 
+/**
+ * main - Prints the alphabet in lowercase, except for q and e.
+ *
+ * Return: Always 0.
+ */
 
+int main(void)
+{
+	char letter;
 
- /**
-  *
-  *   * main - Entry point
-  *
-  *     *
-  *
-  *       * Description: print all aplhabet letters except q and e
-  *
-  *         *
-  *
-  *           * Return: Always 0 (Success)
-  *
-  *            */
+	for (letter = 'a'; letter <= 'z'; letter++)
+	{
+		if (letter != 'e' && letter != 'q')
+			putchar(letter);
+	}
 
+	putchar('\n');
 
-
- int main(void)
-
-	 {
-
-		  	char ch = 'a';
-
-
-
-			 	while (ch <= 'z')
-
-					 	{
-
-							 		if (ch == 'e' || ch == 'q')
-
-										 			++ch;
-
-									 		putchar(ch);
-
-											 		++ch;
-
-													 	}
-
-				 	putchar('\n');
-
-
-
-					 	return (0);
-
-						 }
-
-
+	return (0);
+}
