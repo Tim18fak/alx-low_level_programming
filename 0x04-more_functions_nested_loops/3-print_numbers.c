@@ -1,11 +1,18 @@
 #include "main.h"
+
 /**
- * main - check code
- *
- * Return: Always 0.
+ *print_numbers - print 0123456789
+ * owned by Bwave ICT
+ *Return: void
  */
-int main(void)
+
+void print_numbers(void)
 {
-	print_number();
-	return (0);
+	char c;
+
+	for (c = '0'; c <= '9'; c++)
+	{
+	_putchar(c);
+	}
+	_putchar('\n');
 }
