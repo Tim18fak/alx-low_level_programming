@@ -1,31 +1,19 @@
-#include <stdio.h>
-/*
- * main - string
- * print - string
- * print - print a string
- * @t:string
- * @s: string
- * Return:void
+#include "main.h"
+
+/**
+ * _puts_recursion - print a string
+ * @s:string
+ * Return:vo
  */
-void print(char *t);
-
-int main(void)
+void _puts_recursion(char *s)
 {
-	  char s[10];
-
-	gets(s);
-	print(s);
-	return (0);
-}
-void print(char *t)
-{
-	if (*t == '\0')
+	if (*s)
 	{
-	return;
-	puts("%c", *t);
-	puts(++t);
+		_putchar(*s);
+		_puts_recursion(s + 1);
+	}
+	else
+	{
+		_putchar('\n');
+	}
 }
-
-
-
-
