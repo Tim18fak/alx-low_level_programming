@@ -1,21 +1,29 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
- * main - multiple numbers
- * a: any number
- * b: any other number
- * c: result
+ * main - multiplies two numbers.
+ * @argc: argument count
+ * @argv: arguments
  *
  * Return: 0
  */
 
-int main(void)
+int main(int argc, char **argv)
 {
-	int a;
-	int b;
-	int c = a * b;
+	int x, y;
 
-	printf("the result of the two number is %d\n", c);
+	if (argc < 3)
+	{
+		printf("Error\n");
+		return (1);
+	}
+
+	x = atoi(argv[1]);
+	y = atoi(argv[2]);
+
+	printf("%d\n", x * y);
+
 
 	return (0);
 }
